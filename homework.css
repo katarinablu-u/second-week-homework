@@ -1,0 +1,89 @@
+/* 전체 페이지 기본 설정 */
+body {
+    background-color: #e2ffe1c6;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+}
+
+/* 1️⃣ 맨 위 제목 글씨 크기 키우기 */
+h1 { 
+    color: #0c6dce; 
+    text-align: center;
+    font-size: 2rem; /* 크기를 크게 조절 (기본의 약 3배) */
+    margin-bottom: 20px;
+}
+
+h2 { color: #a376e2; }
+
+/* 문단 스타일 */
+p {
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+/* 2️⃣ 첫 번째 ul(프로필 내부)에 색 넣기 */
+/* 모든 ul에 배경색이 들어있으므로, 구분을 위해 배경색을 변경하거나 
+   프로필 내부의 ul만 따로 지정할 수 있습니다. */
+.right ul {
+    background-color: #fff4e1; /* 연한 오렌지/크림색 추가 */
+    padding: 30px;
+    border-radius: 20px;
+}
+
+li {
+    margin: 20px;
+}
+
+/* 버튼 스타일 */
+button {
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0652dd;
+}
+
+/* 3️⃣ 입력창과 버튼을 오른쪽으로 정렬 */
+.input-group {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    gap: 10px; /* 입력창과 버튼 사이 간격 */
+    margin-top: 1px;
+}
+
+/* 입력창 자체 스타일 살짝 추가 */
+#nameInput {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* 기존 프로필 레이아웃 유지 */
+.profile {
+    display: flex;
+    gap: 70px; 
+}
+
+.left, .right {
+    width: 50%;
+}
+
+.left {
+    width: 35%; /* 영역 너비는 적당히 유지 */
+    display: flex;
+    /* ✅ 핵심: flex-start(왼쪽) 대신 flex-end(오른쪽)로 변경! */
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.right {
+    width: 60%; /* ✅ 사진이 줄어든 만큼 글 영역 너비를 넓힘 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
